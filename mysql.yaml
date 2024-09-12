@@ -5,6 +5,12 @@
     mysql_root_password: expenseapp@1
     login_host: mysql.ags81.online
   tasks: 
+  - name: ansible to install pymysql
+    ansible.builtin.pip:
+      name:
+      - pymysql
+      executable: pip3.9
+      
   - name: install mysql server
     ansible.builtin.package:
       name: mysql-server
@@ -27,3 +33,4 @@
   - name: print mysql information
     ansible.builtin.debug:
       msg: " {{ mysql_info }}"
+
