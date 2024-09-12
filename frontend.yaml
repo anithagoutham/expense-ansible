@@ -4,14 +4,14 @@
   tasks:
   - name: install nginx server
     ansible.builtin.package:
-    name: nginx
-    state: present
+      name: nginx
+      state: present
   
   - name: restart nginx server
     ansible.builtin.service:
-    name: nginx
-    state: restarted
-    enabled: yes
+      name: nginx
+      state: restarted
+      enabled: yes
 
   - name: remove html directory
     ansible.builtin.file:
