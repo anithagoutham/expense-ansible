@@ -7,5 +7,6 @@ Environment=DB_HOST="mysql.ags81.online"
 ExecStart=/bin/node /app/index.js
 SyslogIdentifier=backend
 
-[Install]
+[install]
 WantedBy=multi-user.target
+
